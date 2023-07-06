@@ -7,7 +7,6 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-// let arr = [1, 2, 3, 4, 5];
 const addOne = (arr) => {
   let arr1 = [];
   arr.forEach((n) => {
