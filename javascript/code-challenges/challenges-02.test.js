@@ -16,7 +16,7 @@ const raisedToTheThird = (arr) => {
   });
   return result;
 };
- 
+
 const result = [];
 
 }
