@@ -1,5 +1,7 @@
 'use strict';
 
+const { callback } = require("chart.js/dist/helpers/helpers.core");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -25,14 +27,13 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
-  let arr2 = [];
-  arr.forEach((n) => {
-    arr2.push(n + 1);
+  const results = [];
+  arr.forEach((str) => {
+    results.push(str + '!');
   });
-  return arr2;
+  return results;
 };
 
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -44,6 +45,11 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   // Solution code here...
+  const results = [];
+  arr.forEach((str) => {
+    results.push(str.toUpperCase());
+  });
+  return results;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,12 +63,19 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  const results = word.toUpperCase() + '!';
+  return results;
 };
 
 const speaker = (words, callback) => {
-  // Solution code here...
-};
+  const result = [];
+  words.foreach((words)) => {
+    const modifiedWord = callback(word);
+    result.push(modifiedWord);
+  });
+  return result;
+
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
