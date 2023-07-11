@@ -16,8 +16,7 @@ const raisedToTheThird = (arr) => {
   });
   return result;
 };
-=======
-  // Solution code here...
+ 
 const result = [];
 
 }
@@ -44,7 +43,6 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 const addQuestion = (arr) => {
 
   return arr.map((str) => str + "?");
-=======
 
 };
 
@@ -90,7 +88,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   return arr.map((num) => Math.pow(2, num))};
-=======
+
   // Solution code here...
 };
 
