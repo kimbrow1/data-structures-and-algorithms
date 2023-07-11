@@ -1,7 +1,4 @@
 'use strict';
-
-const { callback } = require("chart.js/dist/helpers/helpers.core");
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
