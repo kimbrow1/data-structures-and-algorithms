@@ -22,8 +22,9 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
-  // Solution code here...
+  return arr.filter((item) => typeof item === 'number');
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -34,8 +35,9 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
+  return arr.filter((item) => item.includes('and'));
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -45,8 +47,8 @@ Write a function named oddValues that, given an array of integers as input, uses
 For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-const oddValues = (arr) => {
-  // Solution code here...
+function oddValues(arr) {
+  return arr.filter((item) => item % 2 !== 0 );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,8 +59,8 @@ Write a function named notInFirstArray that, given two arrays as input, uses fil
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
-const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+const notInFirstArray = (firstArray, secondArray) => {
+  return secondArray.filter((item) => !firstArray.includes(item));
 };
 
 /* ------------------------------------------------------------------------------------------------
