@@ -17,9 +17,6 @@ const raisedToTheThird = (arr) => {
   return result;
 };
 
-const result = [];
-
-}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -88,9 +85,6 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   return arr.map((num) => Math.pow(2, num))};
-
-  // Solution code here...
-};
 
 
 /* ------------------------------------------------------------------------------------------------
