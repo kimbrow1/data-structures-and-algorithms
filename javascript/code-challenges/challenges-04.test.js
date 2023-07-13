@@ -12,18 +12,25 @@ Push each updated animal string into the new array. Return the new array.
 HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
-
-function upper(str) {
-  return str.toUpperCase();
-}
-
-function lower(str) {
-  return str.toLowerCase();
-}
-
 const updateAnimal = (arr, callback) => {
-  // Solution code here...
+  const updatedArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const updatedAnimal = callback(arr[i]);
+    updatedArray.push(updatedAnimal);
+  }
+
+  return updatedArray;
 };
+
+const upper = (animal) => {
+  return animal.toUpperCase();
+};
+
+const lower = (animal) => {
+  return animal.toLowerCase();
+};
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -34,8 +41,19 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    const nameA = a.toLowerCase();
+    const nameB = b.toLowerCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    return a.localeCompare(b);
+  });
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -46,7 +64,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => a - b);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,8 +76,9 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => b - a);
 };
+;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
