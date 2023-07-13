@@ -91,8 +91,9 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'accent' }));
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -108,8 +109,10 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort((a, b) => a.price - b.price);
+  return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
