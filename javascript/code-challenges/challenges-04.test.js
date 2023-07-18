@@ -41,17 +41,16 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  return arr.sort((a, b) => {
-    const nameA = a.toLowerCase();
-    const nameB = b.toLowerCase();
-    if (nameA < nameB) {
+   arr.sort((a, b) => {
+
+    if (a === b) {
+      return 0;
+    } else if (a < b) {
       return -1;
-    }
-    if (nameA > nameB) {
-      return 1;
-    }
-    return a.localeCompare(b);
+    } else if (a > b)
+    return 1;
   });
+  return arr;
 };
 
 
@@ -91,7 +90,16 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  return arr.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'accent' }));
+  arr.sort((a, b) => {
+
+    if (a === b) {
+      return 0;
+    } else if (a < b) {
+      return -1;
+    } else if (a > b)
+    return 1;
+  });
+  return arr;
 };
 
 
