@@ -68,7 +68,7 @@ const sortByChildren = (charArray) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
+Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
 
 ------------------------------------------------------------------------------------------------ */
 
@@ -76,7 +76,6 @@ const containsW = (str) => {
   const regex = /w/;
   return regex.test(str);
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -109,7 +108,6 @@ const containsWorld = (input) => {
   return pattern.test(inputString);
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -118,18 +116,9 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const regex = /\b[A-Z][a-zA-Z]*\b/g;
+const isCapitalized = (str) => {
+  // Solution code here...
 
-// Array to store all the matches
-const matches = [];
-
-// Exec method to find all matches in the string
-let match;
-while ((match = regex.exec(str)) !== null) {
-  matches.push(match[0]);
-}
-
-return matches;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -139,6 +128,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
+  
   // Use regular expression pattern to match city names starting with letters A through J (case-insensitive)
   const regex = /^[A-J]/i;
 
