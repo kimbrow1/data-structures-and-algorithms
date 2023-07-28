@@ -118,20 +118,15 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const regex = /\b[A-Z][a-zA-Z]*\b/g;
+const isCapitalized = (str) => {
+  // Regular expression pattern to match words starting with a capital letter
+  const regex = /\b[A-Z][a-zA-Z]*\b/g;
 
-// Array to store all the matches
-const matches = [];
+  // Use the match method to find all matches in the string and return the result
+  const matches = str.match(regex) || [];
 
-// Exec method to find all matches in the string
-let match;
-while ((match = regex.exec(str)) !== null) {
-  matches.push(match[0]);
-}
-
-return matches;
+  return matches;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
