@@ -116,7 +116,6 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
   return houses;
 };
 

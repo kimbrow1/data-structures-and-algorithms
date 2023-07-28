@@ -77,7 +77,6 @@ const containsW = (str) => {
   return regex.test(str);
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -109,7 +108,6 @@ const containsWorld = (input) => {
   return pattern.test(inputString);
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -118,15 +116,16 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const isCapitalized = (str) => {
-  // Regular expression pattern to match words starting with a capital letter
-  const regex = /\b[A-Z][a-zA-Z]*\b/g;
 
-  // Use the match method to find all matches in the string and return the result
-  const matches = str.match(regex) || [];
+  const isCapitalized = (str) => {
+    // Regular expression pattern to match words starting with a capital letter
+    const regex = /\b[A-Z][a-zA-Z]*\b/g;
 
-  return matches;
-};
+    // Use the match method to find all matches in the string and return the result
+    const matches = str.match(regex) || [];
+
+    return matches;
+  };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -134,6 +133,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
+
   // Use regular expression pattern to match city names starting with letters A through J (case-insensitive)
   const regex = /^[A-J]/i;
 
