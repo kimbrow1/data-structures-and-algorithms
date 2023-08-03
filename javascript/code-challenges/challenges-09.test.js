@@ -162,7 +162,7 @@ const hasChildrenValues = (arr, character) => {
   }
   return false;
 };
-//add 
+//add
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
