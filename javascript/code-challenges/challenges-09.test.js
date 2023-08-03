@@ -9,9 +9,15 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
-  fvf
+  if (arr.length === 0) {
+    throw new Error("Array is empty");
+  }
+
+  return arr.reduce((max, current) => {
+    return current > max ? current : max;
+  });
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -20,14 +26,20 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301',
+  duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
 
 const getCourseKeys = (obj) => {
-  // Solution code here...
+  return Object.keys(obj);
 };
+
+const keysArray = getCourseKeys(courseInfo);
+console.log(keysArray); // Output: ['name', 'duration', 'topics', 'finalExam']
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -38,8 +50,10 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  // Solution code here...
+  const valuesArray = Object.values(obj);
+  return valuesArray.includes(value);
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -61,7 +75,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Solution code here...
+  return Object.entries(obj).map(([name, phoneNumber]) => `${name}: ${phoneNumber}`);
 };
 
 
@@ -117,9 +131,16 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  arr.forEach((character) => {
+    if (!houses.includes(character.house)) {
+      houses.push(character.house);
+    }
+  });
   return houses;
 };
+
+
+
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -134,9 +155,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+  const characterData = arr.find((char) => char.name === character);
+  if (characterData) {
+    const valuesArray = Object.values(characterData);
+    return valuesArray.includes(characterData.children);
+  }
+  return false;
 };
+//add 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
