@@ -131,11 +131,14 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
+
   arr.forEach((character) => {
     if (!houses.includes(character.house)) {
       houses.push(character.house);
     }
   });
+=======
+
   return houses;
 };
 
