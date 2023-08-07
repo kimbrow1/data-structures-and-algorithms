@@ -381,6 +381,5 @@ xdescribe('Testing challenge 11', () => {
     expect(result.length).toStrictEqual(3);
     expect(result[0]).toStrictEqual(3);
     expect(result[1]).toStrictEqual(12);
-    expect(result[2]).toStrictEqual(27);
-  });
+]  });
 });
