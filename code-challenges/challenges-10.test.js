@@ -13,7 +13,7 @@ function returnTen(str) {
   const lastTenChars = charArray.splice(-10);
 
   return lastTenChars;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
